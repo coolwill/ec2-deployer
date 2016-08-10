@@ -31,7 +31,7 @@
     	if (file_exists($filename)) {
 			header('Content-Type: application/octet-stream');
 			header('Content-Disposition: attachment; filename='.basename($filename));
-			header('Content-Length: ' . filesize($file_name));
+			header('Content-Length: ' . filesize($filename));
     		readfile($filename);
     	}else{
     		header("HTTP/1.0 404 File Not Found", false, 404);
